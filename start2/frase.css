@@ -22,25 +22,30 @@ body {
 
 .parole i {
     color: #6A889C;
-    position: absolute
-}
-
-.parole i:nth-of-type(1) {
-    animation: substitute 5s both infinite cubic-bezier(0, 1, 1, 0);
+    position: absolute;
+    animation: substitute 4s both;
+    z-index: 1;
 }
 
 .parole i:nth-of-type(2) {
-    animation: substitute 5s 5s both infinite cubic-bezier(0, 1, 1, 0);
+    animation-delay: 3s;
 }
 
 .parole i:nth-of-type(3) {
-    animation: substitute 5s 10s both infinite cubic-bezier(0, 1, 1, 0);
+    animation-delay: 6s;
 }
 
 @keyframes substitute {
     from {
         /* translate: y -1000px; */
-        transform: translateY(-1000px);
+        transform: translateY(-100px);
+        opacity: 0%;
+    }
+
+    35%,
+    65% {
+        transform: translateY(0);
+        opacity: 100%;
     }
 
     /* 50% {
@@ -48,8 +53,8 @@ body {
     } */
 
     to {
-        transform: translateY(1000px);
-
+        transform: translateY(100px);
+        opacity: 0%;
         /* translate: y 1000px; */
     }
 }
